@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Guitar-tabs to songtex.js</title>
+    </head>
+    <body>
+        <h1>Guitar-tabs to songtex.js</h1>
+        
+        <h2>Song(s) to parse</h2>
+        <textarea id="raw_song" cols="100" rows="20" placeholder="Raw song(s) to parse"></textarea><br/>
+        <input type="button" value="Parse" onclick="parse_id('raw_song','parsed_song')" />
+        
+        <h2>Result of the parsing</h2>
+        <pre id="parsed_song">
+        </pre>
+        
+        <script src="guitar-tabs_songtex.js"></script>
+        <script>
+        
+          function parse_id(src_id, dst_id) {
+              'use strict';
+              var src = document.getElementById(src_id),
+                  dst = document.getElementById(dst_id),
+                  raw_textlines = src.value.split(/\r\n|\r|\n/g);
+
+              dst.innerHTML = parse(raw_textlines).join('<br/>');
+          }
+          parse_id('raw_song', 'parsed_song');
+        </script>
+    </body>
+</html>
