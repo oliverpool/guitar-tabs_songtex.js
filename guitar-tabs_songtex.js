@@ -52,8 +52,8 @@ function insert_tabs_in_line(cur_line, cur_tabs) {
 function extract_tabs(line) {
     'use strict';
     //var reg = /^(.* )?[A-Ga-g](#|b|&)?m?(sus|add)?[0-9]?( *(-|\/) *[A-G](#|b|&)?)? *$/;
-    var reg = /^ *[A-Ga-g](#|b|&)?m?(sus|add)?[0-9]?( *(-|\/) *[A-G](#|b)?)?( +[A-Ga-g](#|b|&)?m?(sus|add)?[0-9]?( *(-|\/) *[A-G](#|b|&)?)? *)* *$/,
-        reguniq = /[A-Ga-g](#|b|&)?m?(sus|add)?[0-9]?( *(-|\/) *[A-G](#|b|&)?)? *$/,
+    var reg = /^ *[A-Ga-g](#|b|&)?m?(sus|add|maj)?[0-9]?( *(-|\/) *[A-G](#|b)?)?( +[A-Ga-g](#|b|&)?m?(sus|add|maj)?[0-9]?( *(-|\/) *[A-G](#|b|&)?)? *)* *$/,
+        reguniq = /[A-Ga-g](#|b|&)?m?(sus|add|maj)?[0-9]?( *(-|\/) *[A-G](#|b|&)?)? *$/,
         i,
         tab;
 
