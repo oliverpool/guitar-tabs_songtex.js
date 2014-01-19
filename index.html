@@ -28,7 +28,7 @@
                   dst = document.getElementById(dst_id),
                   raw_textlines = src.value.split(/\r\n|\r|\n/g);
 
-              dst.innerHTML = parse(raw_textlines).join('<br/>');
+              dst.innerHTML = plainTab2tex.parse(raw_textlines).join('<br/>');
           }
           parse_id('raw_song', 'parsed_song');
         </script>
