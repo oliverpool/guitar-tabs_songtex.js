@@ -9,7 +9,7 @@ http://codepen.io/anon/pen/fdczb
 
 Usage
 -------------
-Just call the parse() function with an array of lines, it will return an array of lines
+Just call the plainTab2tex.parse() function with an array of lines, it will return an array of lines
 
   
     function parse_id(src_id, dst_id) {
@@ -17,5 +17,5 @@ Just call the parse() function with an array of lines, it will return an array o
             dst = document.getElementById(dst_id),
             raw_textlines = src.value.split(/\r\n|\r|\n/g);
     
-        dst.innerHTML = parse(raw_textlines).join('<br/>');
+        dst.innerHTML = plainTab2tex.parse(raw_textlines).join('<br/>');
     }
