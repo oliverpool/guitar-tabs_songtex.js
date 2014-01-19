@@ -5,7 +5,7 @@ JS script to convert raw text tabs to tex file for the songbook package (see htt
 
 Demo
 -------------
-http://codepen.io/anon/pen/fdczb
+http://jsbin.com/OyaGEzaQ/1
 
 Usage
 -------------
